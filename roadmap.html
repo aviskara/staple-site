@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staple — Roadmap</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .legend { display:flex; gap:18px; margin:0 0 28px; }
+  .legend span { display:inline-flex; align-items:center; gap:7px; }
+  .box { display:inline-block; width:13px; height:13px; border:1px solid var(--rule);
+    border-radius:3px; position:relative; flex:0 0 auto; }
+  .box.on { border-color:var(--accent); background:var(--accent); }
+  .box.on::after { content:"✓"; position:absolute; inset:0; color:var(--card);
+    font:700 10px/13px -apple-system,system-ui,sans-serif; text-align:center; }
+  .group { margin:0 0 30px; }
+  .group > h2 { margin:0 0 10px; }
+  ul.task, ul.task ul { list-style:none; margin:0; padding:0; }
+  ul.task ul { padding-left:26px; margin-top:8px; }
+  ul.task li { position:relative; padding-left:26px; margin:0 0 8px; max-width:62ch; }
+  ul.task li::before { content:""; position:absolute; left:0; top:.42em; width:13px;
+    height:13px; border:1px solid var(--rule); border-radius:3px; }
+  ul.task li.done::before { border-color:var(--accent); background:var(--accent); }
+  ul.task li.done::after { content:"✓"; position:absolute; left:0; top:.42em; width:13px;
+    color:var(--card); font:700 10px/13px -apple-system,system-ui,sans-serif; text-align:center; }
+  ul.task li.done { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Staple mark">
+    <path d="M0 0H200V96H160V80H184V16H16V80H40V96H0Z" fill="currentColor"/>
+  </svg>
+  <h1>Roadmap</h1>
+  <p class="tag">What's built, what's coming, and what's still an idea.</p>
+  <hr>
+
+  <p>Everything below is grouped by what it's for, not by when it lands. There
+  are no dates — Staple is built by one person, and a date on this page would
+  be a promise rather than a plan. <strong>The order comes from you:</strong>
+  the poll in the beta Discord decides what gets built next.</p>
+
+  <p class="legend">
+    <span><i class="box on"></i> in your build now</span>
+    <span><i class="box"></i> not yet</span>
+  </p>
+
+  <div class="group">
+    <h2>Photos</h2>
+    <ul class="task">
+      <li class="done">Taken at the table and kept on your phone</li>
+      <li>Backed up, so a new phone keeps them</li>
+      <li>One per dish, not one per meal</li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2>Friends, where you actually decide</h2>
+    <ul class="task">
+      <li class="done">Follow someone and see what they want to go to</li>
+      <li>Their scores on the place page itself, while you're deciding</li>
+      <li>A notification when someone follows you</li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2>Deciding together</h2>
+    <ul class="task">
+      <li class="done">Propose places, rank them, and vote — inside the app</li>
+      <li>A link anyone can vote on, with no app and no account
+        <ul>
+          <li>The people you're eating with must never need to install anything</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2>A ranking that's actually ranked</h2>
+    <ul class="task">
+      <li>Break ties within a price band, instead of by what you ate most recently</li>
+      <li>Move a place up or down by hand when the order is wrong</li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2>Polish, and looking back</h2>
+    <ul class="task">
+      <li>A proper design pass on the rating screen</li>
+      <li>Your year in value finds — built on how honestly you rate, not how much</li>
+    </ul>
+  </div>
+
+  <hr>
+  <h2>Not building, on purpose</h2>
+  <p>Leaderboards, streaks, a public feed of strangers, and anything that makes
+  eating out feel like a competition. Those are what break every other app in
+  this category, and they're refused rather than deferred.</p>
+
+  <footer>
+    <p class="meta"><a href="index.html">Staple</a> · <a href="privacy.html">Privacy policy</a></p>
+  </footer>
+</main>
+</body>
+</html>
