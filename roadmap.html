@@ -6,15 +6,18 @@
 <title>Staple — Roadmap</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .legend { display:flex; gap:18px; margin:0 0 28px; }
+  .legend { display:flex; gap:18px; margin:0 0 8px; flex-wrap:wrap; }
   .legend span { display:inline-flex; align-items:center; gap:7px; }
   .box { display:inline-block; width:13px; height:13px; border:1px solid var(--rule);
     border-radius:3px; position:relative; flex:0 0 auto; }
   .box.on { border-color:var(--accent); background:var(--accent); }
   .box.on::after { content:"✓"; position:absolute; inset:0; color:var(--card);
     font:700 10px/13px -apple-system,system-ui,sans-serif; text-align:center; }
-  .group { margin:0 0 30px; }
-  .group > h2 { margin:0 0 10px; }
+  .horizon { margin:44px 0 6px; padding-top:22px; border-top:1px dashed var(--rule); }
+  .horizon:first-of-type { border-top:0; padding-top:0; margin-top:34px; }
+  .horizon h2 { margin:0 0 3px; font-size:22px; }
+  .horizon p { color:var(--muted); margin:0 0 20px; }
+  h3 { color:var(--ink); font-size:15px; margin:24px 0 8px; }
   ul.task, ul.task ul { list-style:none; margin:0; padding:0; }
   ul.task ul { padding-left:26px; margin-top:8px; }
   ul.task li { position:relative; padding-left:26px; margin:0 0 8px; max-width:62ch; }
@@ -24,6 +27,8 @@
   ul.task li.done::after { content:"✓"; position:absolute; left:0; top:.42em; width:13px;
     color:var(--card); font:700 10px/13px -apple-system,system-ui,sans-serif; text-align:center; }
   ul.task li.done { color:var(--muted); }
+  .ideas { color:var(--secondary); }
+  .ideas li { margin-bottom:6px; }
 </style>
 </head>
 <body>
@@ -32,70 +37,106 @@
     <path d="M0 0H200V96H160V80H184V16H16V80H40V96H0Z" fill="currentColor"/>
   </svg>
   <h1>Roadmap</h1>
-  <p class="tag">What's built, what's coming, and what's still an idea.</p>
+  <p class="tag">Where Staple goes next, and what's already here.</p>
   <hr>
 
-  <p>Everything below is grouped by what it's for, not by when it lands. There
-  are no dates — Staple is built by one person, and a date on this page would
-  be a promise rather than a plan. <strong>The order comes from you:</strong>
-  the poll in the beta Discord decides what gets built next.</p>
+  <p>No dates. Staple is built by one person, and a date here would be a promise
+  rather than a plan. What's ordered is the <em>sequence</em>, and
+  <strong>you decide it</strong> — the poll in the beta Discord is what moves
+  something up.</p>
 
   <p class="legend">
-    <span><i class="box on"></i> in your build now</span>
+    <span><i class="box on"></i> already in your build</span>
     <span><i class="box"></i> not yet</span>
   </p>
 
-  <div class="group">
-    <h2>Photos</h2>
-    <ul class="task">
-      <li class="done">Taken at the table and kept on your phone</li>
-      <li>Backed up, so a new phone keeps them</li>
-      <li>One per dish, not one per meal</li>
-    </ul>
-  </div>
+  <section class="horizon">
+    <h2>Next</h2>
+    <p>Being built now.</p>
 
-  <div class="group">
-    <h2>Friends, where you actually decide</h2>
+    <h3>Photos that leave your phone</h3>
     <ul class="task">
-      <li class="done">Follow someone and see what they want to go to</li>
-      <li>Their scores on the place page itself, while you're deciding</li>
+      <li class="done">Taken at the table, kept on your device</li>
+      <li>Backed up, so a new phone doesn't lose them</li>
+      <li>Visible to the people you share a place or a plan with</li>
+    </ul>
+
+    <h3>Friends, at the moment you're deciding</h3>
+    <ul class="task">
+      <li class="done">Follow someone and see where they want to go</li>
+      <li class="done">Choose whether new followers need your approval</li>
+      <li>Their scores on the restaurant page itself, not just in your own list</li>
       <li>A notification when someone follows you</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="group">
-    <h2>Deciding together</h2>
+  <section class="horizon">
+    <h2>After that</h2>
+    <p>Committed, not started.</p>
+
+    <h3>Restaurant pages worth reading</h3>
+    <ul class="task">
+      <li>What the people you follow scored it</li>
+      <li>The dishes people actually order, and the ones they say to skip</li>
+    </ul>
+
+    <h3>Profiles worth visiting</h3>
+    <ul class="task">
+      <li>Someone's ranked list, and how they score on average</li>
+      <li>A review of your own year — monthly, quarterly, and a proper end-of-year</li>
+    </ul>
+
+    <h3>Planning that lands on an answer</h3>
     <ul class="task">
       <li class="done">Propose places, rank them, and vote — inside the app</li>
+      <li>A better tally, with a real tiebreaker when the vote is split</li>
+      <li>A budget for the night, set up front</li>
+      <li>Edit what's on the table after you've proposed it</li>
+      <li>Change your ranking after you've already voted</li>
       <li>A link anyone can vote on, with no app and no account
         <ul>
           <li>The people you're eating with must never need to install anything</li>
         </ul>
       </li>
     </ul>
-  </div>
 
-  <div class="group">
-    <h2>A ranking that's actually ranked</h2>
+    <h3>A ranking you can trust</h3>
     <ul class="task">
       <li>Break ties within a price band, instead of by what you ate most recently</li>
-      <li>Move a place up or down by hand when the order is wrong</li>
+      <li>Re-rank by hand when the order is wrong</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="group">
-    <h2>Polish, and looking back</h2>
+  <section class="horizon">
+    <h2>Polish</h2>
+    <p>Making it feel finished.</p>
     <ul class="task">
       <li>A proper design pass on the rating screen</li>
-      <li>Your year in value finds — built on how honestly you rate, not how much</li>
+      <li>Motion, used sparingly</li>
+      <li>Better headers across the app</li>
     </ul>
-  </div>
+  </section>
+
+  <section class="horizon">
+    <h2>Ideas, not commitments</h2>
+    <p>Interesting, unscheduled, and some of it may never happen. Most of this
+    is where a paid tier would live if there ever is one — rating, ranking and
+    everything social stay free, always.</p>
+    <ul class="task ideas">
+      <li>Personal taste analytics — your price-band bias, your cuisines, how you drift</li>
+      <li>Trip and city planning mode</li>
+      <li>Scan a dish to tag it, running on your phone rather than a server</li>
+      <li>Advanced filters, and an extra decimal place</li>
+      <li>Export, and full offline access</li>
+      <li>Unlimited lists and tags, and a profile you can make your own</li>
+    </ul>
+  </section>
 
   <hr>
   <h2>Not building, on purpose</h2>
-  <p>Leaderboards, streaks, a public feed of strangers, and anything that makes
-  eating out feel like a competition. Those are what break every other app in
-  this category, and they're refused rather than deferred.</p>
+  <p>Leaderboards, streaks, a public feed of strangers, and anything that turns
+  eating out into a competition. Those are what break every other app in this
+  category, and they're refused rather than deferred.</p>
 
   <footer>
     <p class="meta"><a href="index.html">Staple</a> · <a href="privacy.html">Privacy policy</a></p>
